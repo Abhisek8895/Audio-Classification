@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/master.css') }}"/>
+    
+    <title>Upload File</title>
+  </head>
+  <body>
+    <div class="bg-image">
+    <div class="main">
+      <div class="center">
+        <p class = "title">Upload Audio File(MP3/WAV)</p>
+        <form action="/uploaded" id="uploadForm" method="post" enctype="multipart/form-data">
+          <div class="button_wrapper">
+          <input class="audio_upload" type="file" id="audioFile" name="audioFile" accept="audio/*" />
+          <button type="submit" class="long_button">Upload</button>  
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  </body>
+  
+</html>

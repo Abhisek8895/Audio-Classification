@@ -1,0 +1,38 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: rgb(14,37,97);
+    background: linear-gradient(315deg, rgba(14,37,97,1) 4%, rgba(68,164,210,1) 84%);
+}
+
+.error-container {
+    position: relative;
+    height: 100%;
+}
+
+.error-message {
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff6347; /* Tomato */
+    padding: 15px 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Start from the center */
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    animation: rotateMessage 10s linear infinite; /* Rotation animation */
+}
+
+@keyframes rotateMessage {
+    0% {
+        transform: translate(-50%, -50%) rotateY(0deg); /* Initial rotation */
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateY(360deg); /* Final rotation */
+    }
+}

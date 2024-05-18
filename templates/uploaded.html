@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/master.css') }}"/>
+    <title>Uploaded</title>
+
+</head>
+<body>
+<div class="bg-image">
+    <div class="main">
+      <div class="center">
+        <p class="title">File Uploaded Successfully</p>
+        <div class="wrapper">
+            <audio controls>
+                <source src="{{ url_for('audios', filename='sample.mp3') }}" type="audio/mp3">
+                <source src="{{ url_for('audios', filename='sample.wav') }}" type="audio/wav">
+                <source src="{{ url_for('audios', filename='sample.ogg') }}" type="audio/ogg">
+                <p>Your browser does not support the audio element.</p>
+            </audio>
+            <br>
+            {% if predicted_result %}
+            <p class="title">{{predicted_result}}</p>
+            {% endif %}
+            <form action="/prediction" method="post">
+            <button type="submit" class="long_button" id= "classify_btn">Classify Audio</button>
+            </form>
+        </div>
+      </div>
+    </div>
+    </div>
+</body>
+</html>
+
+<script>
+    // Function to disable the "Classify Audio" button
+    function disableClassifyButton() {
+        document.getElementById("classify_btn").remove();
+    }
+
+    // Check if predicted_result is not empty and disable the button if needed
+    window.onload = function() {
+        var predictedResult = "{{ predicted_result }}";
+        if (predictedResult) {
+            disableClassifyButton();
+        }
+    };
+</script>

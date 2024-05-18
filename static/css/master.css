@@ -1,0 +1,180 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+  background: rgb(14,37,97);
+  background: linear-gradient(315deg, rgba(14,37,97,1) 4%, rgba(68,164,210,1) 84%);
+}
+
+input[type="file"] {
+  /* Apply styles */
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+  border-radius: 20px;
+  /* Add any other styles you want */
+}
+
+/* Optionally, style the button inside the file input */
+input[type="file"]::-webkit-file-upload-button {
+  /* Apply styles */
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  border-radius: 20px;
+  /* Add any other styles you want */
+}
+  
+
+p{
+    color:white;
+    font-size: 50px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.title{
+  margin-bottom: 25px;
+}
+
+.button_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    /* position: absolute; */
+    /* z-index: 5; */
+}
+
+.wrapper{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+button {
+    display:flex;
+    align-items: center;
+    justify-content: center;  
+    background: #d9ad34;
+    background-image: -webkit-linear-gradient(top, #d9ad34, #b8762b);
+    background-image: -moz-linear-gradient(top, #d9ad34, #b8762b);
+    background-image: -ms-linear-gradient(top, #d9ad34, #b8762b);
+    background-image: -o-linear-gradient(top, #d9ad34, #b8762b);
+    background-image: linear-gradient(to bottom, #d9ad34, #b8762b);
+    -webkit-border-radius: 49;
+    -moz-border-radius: 49;
+    border-radius: 49px;
+    -webkit-box-shadow: 0px 1px 3px #000000;
+    -moz-box-shadow: 0px 1px 3px #000000;
+    box-shadow: 0px 1px 3px #000000;
+    font-family: Georgia;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    margin: 5px 5px 5px 5px;
+  }
+  
+  button:hover {
+    background: #3cfc7f;
+    background-image: -webkit-linear-gradient(top, #3cfc7f, #34d942);
+    background-image: -moz-linear-gradient(top, #3cfc7f, #34d942);
+    background-image: -ms-linear-gradient(top, #3cfc7f, #34d942);
+    background-image: -o-linear-gradient(top, #3cfc7f, #34d942);
+    background-image: linear-gradient(to bottom, #3cfc7f, #34d942);
+    text-decoration: none;
+  }
+
+.main{
+  height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .center{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+} */
+
+a{
+  text-decoration: none;
+}
+
+.long_button{
+    height:50px;
+    width: 150px;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+
+  .bg-image {
+    position: relative;
+  }
+  
+  .bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.9; /* Set your desired opacity here */
+    z-index: -1; /* Ensures the image stays behind your content */
+  }
+
+
+  .prediction{
+    color: white;
+  }
+
+  .classify-btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;  
+    background: #d9ad34;
+    background-image: -webkit-linear-gradient(top, #d9ad34, #b8762b);
+    background-image: -moz-linear-gradient(top, #d9ad34, #b8762b);
+    background-image: -ms-linear-gradient(top, #d9ad34, #b8762b);
+    background-image: -o-linear-gradient(top, #d9ad34, #b8762b);
+    background-image: linear-gradient(to bottom, #d9ad34, #b8762b);
+    -webkit-border-radius: 49;
+    -moz-border-radius: 49;
+    border-radius: 49px;
+    -webkit-box-shadow: 0px 1px 3px #000000;
+    -moz-box-shadow: 0px 1px 3px #000000;
+    box-shadow: 0px 1px 3px #000000;
+    font-family: Georgia;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    margin: 5px 5px 5px 5px;
+    width: 25px;
+    height: 10px;
+  }
+
+
+
+.disable_btn{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="{{ url_for('static', filename='js/record.js') }}"></script>
+    <title>Audio Recording and Classification</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/master.css') }}">
+  </head>
+  <body>
+
+    <div class="bg-image">
+      <div class="main">
+        <div class="center">
+          <p class="title">Start Recording</p>
+          <div class="button_wrapper">
+            <button class="long_button" id="start">Start Recording</button>
+            <button class="long_button" id="stop" disabled>Stop Recording</button>
+            <form action="/record_prediction" method="post">
+              <button type="submit" class="long_button">Classify</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/master.css') }}">
+</head>
+<body>
+
+    <div class="bg-image">
+        <div class="main">
+          <div class="center">
+            <p class="title">Prediction Result</p>
+                {% if predicted_result %}
+                <p class="prediction">Type = {{predicted_result}}</p>
+                {% endif %}
+          </div>
+        </div>
+        </div>
+        
+</body>
+</html>
+
+<script>
+    // Function to disable the "Classify Audio" button
+    function disableClassifyButton() {
+        document.getElementById("classify_btn").disabled = true;
+    }
+
+    // Check if predicted_result is not empty and disable the button if needed
+    window.onload = function() {
+        var predictedResult = "{{ predicted_result }}";
+        if (predictedResult) {
+            disableClassifyButton();
+        }
+    };
+</script>
